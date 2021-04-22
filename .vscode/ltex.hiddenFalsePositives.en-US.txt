@@ -19,3 +19,5 @@
 {"rule":"DASH_RULE","sentence":"^\\Q-state management using riverpod and view-model dependency injection using provider\\E$"}
 {"rule":"DASH_RULE","sentence":"^\\Q-integration instrumented testing\\E$"}
 {"rule":"DASH_RULE","sentence":"^\\Q-goldens testing\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qfproject_layout\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qfproject_layout\\E$"}

@@ -1,0 +1,31 @@
+@startuml
+set namespaceSeparator ::
+
+class "fproject_layout::app::data::models::counter_mixin.dart::CounterMixin" {
+  {static} -int _counter
+  +int myCounter
+}
+
+class "fproject_layout::app::modules::my_app.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "fproject_layout::app::modules::my_app.dart::MyApp"
+
+class "fproject_layout::app::screens::myhomepage::managers::my_home_page.dart::MyHomePage" {
+  +dynamic title
+  +MyHomePageState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "fproject_layout::app::screens::myhomepage::managers::my_home_page.dart::MyHomePage"
+
+class "fproject_layout::app::screens::myhomepage::statecontainers::my_home_page_state.dart::MyHomePageState" {
+  -void _incrementCounter()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "fproject_layout::app::screens::myhomepage::statecontainers::my_home_page_state.dart::MyHomePageState"
+"fproject_layout::app::data::models::counter_mixin.dart::CounterMixin" <|-- "fproject_layout::app::screens::myhomepage::statecontainers::my_home_page_state.dart::MyHomePageState"
+
+
+@enduml

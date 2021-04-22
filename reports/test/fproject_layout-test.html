@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fproject_layout-test.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    width: 50%;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-left: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : fproject_layout-test.xml
+</h1>
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title
+                <ul>
+                    
+                    <li><a href="#ba3b7956-f222-4492-a392-521750d44ab4">Basic App Chrome Title test Specified title and color are used to build a Title</a></li>
+                    
+                    <li><a href="#7c5ec7ac-f9b2-4338-be32-0788120b77f4">Basic App Chrome Title test onGenerateTitle handles changing locales</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget
+                <ul>
+                    
+                    <li><a href="#d711ee5f-a19a-4e8e-86ff-64d8b6b363fa">Basic Golden Tests  Golden test</a></li>
+                    
+                    <li><a href="#e6b260c3-7e77-4d92-8e79-b1c9cca27a46">Basic Golden Tests  DeviceBuilder  Golden</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page
+                <ul>
+                    
+                    <li><a href="#f93dc22a-c121-43ba-bb67-a2b2586c151e">DeviceBuilder - one scenario - default devices Golden</a></li>
+                    
+                    <li><a href="#99d38218-3e5c-42eb-9f08-36f541ac5ffa">DeviceBuilder - one scenario - override devices Golden</a></li>
+                    
+                    <li><a href="#d6e6ed0c-e8ef-478b-b99d-8a7cda2abccd">DeviceBuilder - multiple scenarios - with onCreate Golden</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget
+                <ul>
+                    
+                    <li><a href="#80ac79f1-d194-454a-88d4-3f31192460d2">Counter increments smoke test</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    <li><a href="#ba3b7956-f222-4492-a392-521750d44ab4">[F] D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title : Basic App Chrome Title test Specified title and color are used to build a Title</a></li>
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#d711ee5f-a19a-4e8e-86ff-64d8b6b363fa">[F] D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget : Basic Golden Tests  Golden test</a></li>
+                    
+                    
+                    
+                    <li><a href="#e6b260c3-7e77-4d92-8e79-b1c9cca27a46">[F] D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget : Basic Golden Tests  DeviceBuilder  Golden</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#f93dc22a-c121-43ba-bb67-a2b2586c151e">[F] D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page : DeviceBuilder - one scenario - default devices Golden</a></li>
+                    
+                    
+                    
+                    <li><a href="#99d38218-3e5c-42eb-9f08-36f541ac5ffa">[F] D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page : DeviceBuilder - one scenario - override devices Golden</a></li>
+                    
+                    
+                    
+                    <li><a href="#d6e6ed0c-e8ef-478b-b99d-8a7cda2abccd">[F] D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page : DeviceBuilder - multiple scenarios - with onCreate Golden</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title</h2>
+        <a id="b970c9ac-3e2f-4c38-a9a4-f778ea254a0e"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>1</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="ba3b7956-f222-4492-a392-521750d44ab4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Basic App Chrome Title test Specified title and color are used to build a Title</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>1.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>1 error, see stacktrace for details</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Error:\n\nTest failed. See exception logs above.
+The test description was: Specified title and color are used to build a Title</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+The following TestFailure object was thrown running a test:
+  Expected: &#39;FProject Layout&#39;
+  Actual: &#39;en_US&#39;
+   Which: is different.
+          Expected: FProject L ...
+            Actual: en_US
+                    ^
+           Differ at offset 0
+
+When the exception was thrown, this was the stack:
+#4      main.&lt;anonymous closure&gt;.&lt;anonymous closure&gt; (file:///D:/fredgrttsstuff/GithubProjects/fproject_layout/test/app_title_test.dart:62:5)
+&lt;asynchronous suspension&gt;
+&lt;asynchronous suspension&gt;
+(elided one frame from package:stack_trace)
+...
+
+This was caught by the test expectation on the following line:
+  file:///D:/fredgrttsstuff/GithubProjects/fproject_layout/test/app_title_test.dart line 62
+The test description was:
+  Specified title and color are used to build a Title
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7c5ec7ac-f9b2-4338-be32-0788120b77f4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Basic App Chrome Title test onGenerateTitle handles changing locales</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.1 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget</h2>
+        <a id="629488a3-3e54-483b-b4d4-abb4bb9f9316"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>2</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="d711ee5f-a19a-4e8e-86ff-64d8b6b363fa"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Basic Golden Tests  Golden test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>2.8 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>1 error, see stacktrace for details</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Error:\n\nTest failed. See exception logs above.
+The test description was: Golden test</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+The following TestFailure object was thrown running a test:
+  Expected: one widget whose rasterized image matches golden image &#34;main.png&#34;
+  Actual: _WidgetTypeFinder:&lt;exactly one widget with type &#34;MyApp&#34; (ignoring offstage widgets):
+MyApp&gt;
+   Which: Could not be compared against non-existent file: &#34;main.png&#34;
+
+When the exception was thrown, this was the stack:
+#0      fail (package:test_api/src/frontend/expect.dart:153:31)
+#1      _expect.&lt;anonymous closure&gt; (package:test_api/src/frontend/expect.dart:128:9)
+&lt;asynchronous suspension&gt;
+&lt;asynchronous suspension&gt;
+(elided 6 frames from dart:async and package:stack_trace)
+
+The test description was:
+  Golden test
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="e6b260c3-7e77-4d92-8e79-b1c9cca27a46"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Basic Golden Tests  DeviceBuilder  Golden</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.7 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>1 error, see stacktrace for details</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Error:\n\nTest failed. See exception logs above.
+The test description was: Golden</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+The following TestFailure object was thrown running a test:
+  Expected: one widget whose rasterized image matches golden image
+&#34;goldens/demo%20page%20multiple%20screens.png&#34;
+  Actual: _FirstFinder:&lt;exactly one widget with widget matching predicate (Closure: (Widget) =&gt;
+bool) (ignoring all but first) (ignoring offstage widgets): DefaultAssetBundle&gt;
+   Which: Could not be compared against non-existent file:
+&#34;goldens/demo%20page%20multiple%20screens.png&#34;
+
+When the exception was thrown, this was the stack:
+#0      fail (package:test_api/src/frontend/expect.dart:153:31)
+#1      _expect.&lt;anonymous closure&gt; (package:test_api/src/frontend/expect.dart:128:9)
+&lt;asynchronous suspension&gt;
+&lt;asynchronous suspension&gt;
+(elided 6 frames from dart:async and package:stack_trace)
+
+The test description was:
+  Golden
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page</h2>
+        <a id="42af1f02-108b-4e79-a12e-d2f978a87978"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>3</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="f93dc22a-c121-43ba-bb67-a2b2586c151e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>DeviceBuilder - one scenario - default devices Golden</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>2.7 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>1 error, see stacktrace for details</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Error:\n\nTest failed. See exception logs above.
+The test description was: Golden</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+The following TestFailure object was thrown running a test:
+  Expected: one widget whose rasterized image matches golden image
+&#34;goldens/my_home_page_single_scenario.png&#34;
+  Actual: _FirstFinder:&lt;exactly one widget with widget matching predicate (Closure: (Widget) =&gt;
+bool) (ignoring all but first) (ignoring offstage widgets): DefaultAssetBundle&gt;
+   Which: Could not be compared against non-existent file:
+&#34;goldens/my_home_page_single_scenario.png&#34;
+
+When the exception was thrown, this was the stack:
+#0      fail (package:test_api/src/frontend/expect.dart:153:31)
+#1      _expect.&lt;anonymous closure&gt; (package:test_api/src/frontend/expect.dart:128:9)
+&lt;asynchronous suspension&gt;
+&lt;asynchronous suspension&gt;
+(elided 6 frames from dart:async and package:stack_trace)
+
+The test description was:
+  Golden
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="99d38218-3e5c-42eb-9f08-36f541ac5ffa"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>DeviceBuilder - one scenario - override devices Golden</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.6 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>1 error, see stacktrace for details</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Error:\n\nTest failed. See exception logs above.
+The test description was: Golden</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+The following TestFailure object was thrown running a test:
+  Expected: one widget whose rasterized image matches golden image
+&#34;goldens/my_home_page_single_scenario_more_devices.png&#34;
+  Actual: _FirstFinder:&lt;exactly one widget with widget matching predicate (Closure: (Widget) =&gt;
+bool) (ignoring all but first) (ignoring offstage widgets): DefaultAssetBundle&gt;
+   Which: Could not be compared against non-existent file:
+&#34;goldens/my_home_page_single_scenario_more_devices.png&#34;
+
+When the exception was thrown, this was the stack:
+#0      fail (package:test_api/src/frontend/expect.dart:153:31)
+#1      _expect.&lt;anonymous closure&gt; (package:test_api/src/frontend/expect.dart:128:9)
+&lt;asynchronous suspension&gt;
+&lt;asynchronous suspension&gt;
+(elided 6 frames from dart:async and package:stack_trace)
+
+The test description was:
+  Golden
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="d6e6ed0c-e8ef-478b-b99d-8a7cda2abccd"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>DeviceBuilder - multiple scenarios - with onCreate Golden</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>5.3 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>1 error, see stacktrace for details</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>Error:\n\nTest failed. See exception logs above.
+The test description was: Golden</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+The following TestFailure object was thrown running a test:
+  Expected: one widget whose rasterized image matches golden image
+&#34;goldens/my_home_page_multiple_scenarios.png&#34;
+  Actual: _FirstFinder:&lt;exactly one widget with widget matching predicate (Closure: (Widget) =&gt;
+bool) (ignoring all but first) (ignoring offstage widgets): DefaultAssetBundle&gt;
+   Which: Could not be compared against non-existent file:
+&#34;goldens/my_home_page_multiple_scenarios.png&#34;
+
+When the exception was thrown, this was the stack:
+#0      fail (package:test_api/src/frontend/expect.dart:153:31)
+#1      _expect.&lt;anonymous closure&gt; (package:test_api/src/frontend/expect.dart:128:9)
+&lt;asynchronous suspension&gt;
+&lt;asynchronous suspension&gt;
+(elided 6 frames from dart:async and package:stack_trace)
+
+The test description was:
+  Golden
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget</h2>
+        <a id="3989b590-7962-46ff-a8f8-8ae50a273cb9"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>1</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="80ac79f1-d194-454a-88d4-3f31192460d2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Counter increments smoke test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>2.8 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>

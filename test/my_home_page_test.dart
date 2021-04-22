@@ -18,7 +18,7 @@ void main() {
   testGoldens('DeviceBuilder - one scenario - default devices', (tester) async {
     final builder = DeviceBuilder()
       ..addScenario(
-        widget: MyHomePage(title:"Fproject Layout",),
+        widget: const MyHomePage(title:"FProject Layout",),
         name: 'default page',
       );
 
@@ -38,7 +38,7 @@ void main() {
             Device.tabletLandscape,
           ])
           ..addScenario(
-            widget: MyHomePage(title:"Fproject Layout",),
+            widget: const MyHomePage(title:"FProject Layout",),
             name: 'default page',
           );
 
@@ -61,12 +61,12 @@ void main() {
             Device.tabletLandscape,
           ])
           ..addScenario(
-            widget: MyHomePage(title:"Fproject Layout",),
+            widget: const MyHomePage(title:"Fproject Layout",),
             name: 'default page',
           )
           // ignore: prefer-trailing-comma
           ..addScenario(
-            widget: MyHomePage(title:"Fproject Layout",),
+            widget: const MyHomePage(title:"FProject Layout",),
             name: 'tap once',
             onCreate: (scenarioWidgetKey) async {
               final finder = find.descendant(
@@ -78,7 +78,7 @@ void main() {
             },
           )
           ..addScenario(
-            widget: MyHomePage(title:"Fproject Layout",),
+            widget: const MyHomePage(title:"FProject Layout",),
             name: 'tap five times',
             onCreate: (scenarioWidgetKey) async {
               final finder = find.descendant(
