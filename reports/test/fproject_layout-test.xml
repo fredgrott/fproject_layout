@@ -1,56 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite errors="1" failures="0" tests="2" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" timestamp="2021-04-22T16:03:47">
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" timestamp="2021-04-24T14:45:23">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" name="Basic App Chrome Title test Specified title and color are used to build a Title" time="0.571">
-      <error message="1 error, see stacktrace for details">Error:\n\nTest failed. See exception logs above.
-The test description was: Specified title and color are used to build a Title</error>
-      <system-out>ΓòÉΓòÉΓòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Γò₧ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-The following TestFailure object was thrown running a test:
-  Expected: 'FProject Layout'
-  Actual: 'en_US'
-   Which: is different.
-          Expected: FProject L ...
-            Actual: en_US
-                    ^
-           Differ at offset 0
-
-When the exception was thrown, this was the stack:
-#4      main.&lt;anonymous closure>.&lt;anonymous closure> (file:///D:/fredgrttsstuff/GithubProjects/fproject_layout/test/app_title_test.dart:62:5)
-&lt;asynchronous suspension>
-&lt;asynchronous suspension>
-(elided one frame from package:stack_trace)
-...
-
-This was caught by the test expectation on the following line:
-  file:///D:/fredgrttsstuff/GithubProjects/fproject_layout/test/app_title_test.dart line 62
-The test description was:
-  Specified title and color are used to build a Title
-ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ</system-out>
-    </testcase>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" name="Basic App Chrome Title test onGenerateTitle handles changing locales" time="0.072"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" name="Basic App Chrome Title test onGenerateTitle handles changing locales" time="4.531"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="2" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" timestamp="2021-04-22T16:03:47">
+  <testsuite errors="0" failures="0" tests="2" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" timestamp="2021-04-24T14:45:23">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  Golden test" time="1.797"/>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  DeviceBuilder  Golden" time="0.564"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  Golden test" time="11.394"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  DeviceBuilder  Golden" time="1.117"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" timestamp="2021-04-22T16:03:47">
+  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" timestamp="2021-04-24T14:45:23">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - default devices Golden" time="1.653"/>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - override devices Golden" time="0.494"/>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - multiple scenarios - with onCreate Golden" time="4.89"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - default devices Golden" time="10.149"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - override devices Golden" time="1.041"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - multiple scenarios - with onCreate Golden" time="6.322"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" timestamp="2021-04-22T16:03:47">
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" timestamp="2021-04-24T14:45:23">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" name="Counter increments smoke test" time="0.911"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" name="Counter increments smoke test" time="1.849"/>
   </testsuite>
 </testsuites>

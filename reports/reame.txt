@@ -1,0 +1,10 @@
+PS D:\fredgrttsstuff\GithubProjects\fproject_layout\reports\coverage> perl C:\ProgramData\chocolatey\lib\lcov\tools\bin\genhtml lcov.info
+Reading data file lcov.info
+Resolved relative source file path "lib\app\modules\my_app.dart" with CWD to "D:\fredgrttsstuff\GithubProjects\fproject_layout\reports\coverage\lib\app\modules\my_app.dart".
+Found 3 entries.
+Found common filename prefix "D:\fredgrttsstuff\GithubProjects\fproject_layout\reports\coverage\lib\app"
+Writing .css and .png files.
+Generating output.
+Processing file modules\my_app.dart
+genhtml: ERROR: cannot read D:\fredgrttsstuff\GithubProjects\fproject_layout\reports\coverage\lib\app\modules\my_app.dart
+PS D:\fredgrttsstuff\GithubProjects\fproject_layout\reports\coverage>
