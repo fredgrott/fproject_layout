@@ -10,7 +10,7 @@ import 'package:fproject_layout/app/screens/myhomepage/managers/my_home_page.dar
 class MyHomePageState extends State<MyHomePage> with CounterMixin{
   
 
-  void _incrementCounter() {
+  void incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -66,8 +66,9 @@ class MyHomePageState extends State<MyHomePage> with CounterMixin{
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: incrementCounter,
         tooltip: 'Increment',
+        key: const Key('increment'),
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

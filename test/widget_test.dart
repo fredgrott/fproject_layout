@@ -12,20 +12,19 @@ import 'package:fproject_layout/app/modules/my_app.dart';
 
 //TODO setup a real test suite
 void main() {
-  // we need to make sure the Flutter Sky-Engine is fully booted first
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // one, should group the setup and teardown setup
-
-  // ignore: no-empty-block
   setUpAll(() async {});
 
-  // ignore: no-empty-block
+  setUp(() async {
+    // ignore: unused_local_variable
+    final WidgetsBinding binding =
+        TestWidgetsFlutterBinding.ensureInitialized();
+  });
+
   tearDownAll(() async {});
 
-  // ignore: no-empty-block
-  tearDown(() async{});
-
+  tearDown(() async {
+    // Code that clears caches can go here
+  });
 
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.

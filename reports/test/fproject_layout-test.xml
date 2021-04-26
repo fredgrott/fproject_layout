@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" timestamp="2021-04-24T14:45:23">
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_bar" timestamp="2021-04-26T14:33:37">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_title" name="Basic App Chrome Title test onGenerateTitle handles changing locales" time="4.531"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.app_bar" name="appbar test title should be FProject Layout" time="4.617"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="2" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" timestamp="2021-04-24T14:45:23">
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.counter" timestamp="2021-04-26T14:33:37">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  Golden test" time="11.394"/>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  DeviceBuilder  Golden" time="1.117"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.counter" name="Counter value should start at 0" time="4.372"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" timestamp="2021-04-24T14:45:23">
+  <testsuite errors="0" failures="0" tests="2" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" timestamp="2021-04-26T14:33:37">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - default devices Golden" time="10.149"/>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - override devices Golden" time="1.041"/>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - multiple scenarios - with onCreate Golden" time="6.322"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  Golden test" time="4.823"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.golden_widget" name="Basic Golden Tests  DeviceBuilder  Golden" time="1.025"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" timestamp="2021-04-24T14:45:23">
+  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" timestamp="2021-04-26T14:33:37">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" name="Counter increments smoke test" time="1.849"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - default devices Golden" time="4.634"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - one scenario - override devices Golden" time="0.926"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.my_home_page" name="DeviceBuilder - multiple scenarios - with onCreate Golden" time="6.385"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" timestamp="2021-04-26T14:33:37">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fproject_layout.test.widget" name="Counter increments smoke test" time="0.827"/>
   </testsuite>
 </testsuites>
