@@ -7,6 +7,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fproject_layout/app/modules/my_app.dart';
 
+import 'app_bar_widget_test_support.dart';
+
 
 void main() {
   // ignore: no-empty-block
@@ -27,13 +29,10 @@ void main() {
   });
 
   group('appbar test', () {
-    testWidgets("title should be FProject Layout", (tester) async {
-      await tester.pumpWidget(MyApp());
-      // ignore: unused_local_variable
-      final titleFinder = find.ancestor(
-        of: find.byType(AppBar),
-        matching: find.text("FProject Layout"),
-      );
-    });
+    testWidgets('AppBar Title is FProject Layout', harness((given, when, then) async {
+    await given.myAppExists();
+    await when.appBarFound();
+    await then.appBarTitleIs();
+  }));
   });
 }
