@@ -4,13 +4,12 @@
 import 'package:flutter/src/widgets/binding.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:fproject_layout/app/data/models/counter_mixin.dart';
-import 'package:fproject_layout/app/modules/my_app.dart';
-import 'package:fproject_layout/app/screens/myhomepage/managers/my_home_page.dart';
 
-import 'package:fproject_layout/app/screens/myhomepage/statecontainers/my_home_page_state.dart';
+
+import 'counter_unit_test_support.dart';
 
 void main() {
+  // ignore: no-empty-block
   setUpAll(() async {});
 
   setUp(() async {
@@ -19,14 +18,17 @@ void main() {
         TestWidgetsFlutterBinding.ensureInitialized();
   });
 
+  // ignore: no-empty-block
   tearDownAll(() async {});
 
+  // ignore: no-empty-block
   tearDown(() async {
     // Code that clears caches can go here
   });
 
-  group('Counter', () {
+  group('CounterMixin Model tests', () {
 
+    // ignore: no-empty-block
     setUp( () async {
         // For example, each test could start at the FooHomePage
       
@@ -35,14 +37,20 @@ void main() {
 
 
     
+    // ignore: no-empty-block
     tearDownAll(() async {});
 
+    // ignore: no-empty-block
     tearDown(() async {});
 
-    testWidgets('value should start at 0', (tester) async {
-      await tester.pumpWidget(MyApp());
-      expect(CounterMixin().myCounter, 0);
-    });
+    
+    // Uses counter_unit_test_support ie test suite support so that 
+    // we can unit test our CounterMixin model
+    test('CounterMixin Model tests', harness((given, when, then) async {
+      given.preConditionCounterZero();
+      await when.userPerformsSomeActionCounterIncreases();
+      then.makeSomeAssertionCounterIs();
+    }));
 
     
   });

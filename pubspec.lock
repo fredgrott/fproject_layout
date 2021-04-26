@@ -245,6 +245,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  given_when_then:
+    dependency: "direct dev"
+    description:
+      name: given_when_then
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   glob:
     dependency: transitive
     description:
@@ -362,6 +369,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+  page_object:
+    dependency: "direct dev"
+    description:
+      name: page_object
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   path:
     dependency: transitive
     description:

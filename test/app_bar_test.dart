@@ -7,7 +7,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fproject_layout/app/modules/my_app.dart';
 
+
 void main() {
+  // ignore: no-empty-block
   setUpAll(() async {});
 
   setUp(() async {
@@ -16,8 +18,10 @@ void main() {
         TestWidgetsFlutterBinding.ensureInitialized();
   });
 
+  // ignore: no-empty-block
   tearDownAll(() async {});
 
+  // ignore: no-empty-block
   tearDown(() async {
     // Code that clears caches can go here
   });
@@ -25,7 +29,11 @@ void main() {
   group('appbar test', () {
     testWidgets("title should be FProject Layout", (tester) async {
       await tester.pumpWidget(MyApp());
-      find.ancestor(of: find.byType(AppBar), matching: find.text("FProject Layout"));
+      // ignore: unused_local_variable
+      final titleFinder = find.ancestor(
+        of: find.byType(AppBar),
+        matching: find.text("FProject Layout"),
+      );
     });
   });
 }

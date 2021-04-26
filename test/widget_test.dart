@@ -12,6 +12,7 @@ import 'package:fproject_layout/app/modules/my_app.dart';
 
 //TODO setup a real test suite
 void main() {
+  // ignore: no-empty-block
   setUpAll(() async {});
 
   setUp(() async {
@@ -20,8 +21,10 @@ void main() {
         TestWidgetsFlutterBinding.ensureInitialized();
   });
 
+  // ignore: no-empty-block
   tearDownAll(() async {});
 
+  // ignore: no-empty-block
   tearDown(() async {
     // Code that clears caches can go here
   });
