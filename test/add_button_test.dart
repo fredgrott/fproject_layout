@@ -9,7 +9,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'add_button_widget_test_support.dart';
 
 void main() {
-  setUpAll(() async {});
+  // ignore: no-empty-block
+  setUpAll(() async {
+    //
+  });
 
   setUp(() async {
     // ignore: unused_local_variable
