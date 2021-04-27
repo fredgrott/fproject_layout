@@ -18,7 +18,7 @@ void main() {
   testGoldens('DeviceBuilder - one scenario - default devices', (tester) async {
     final builder = DeviceBuilder()
       ..addScenario(
-        widget: const MyHomePage(title:"FProject Layout",),
+        widget: const MyHomePage(title:"FProject Layout",message: "You have pushed the button this many times:",),
         name: 'default page',
       );
 
@@ -38,7 +38,7 @@ void main() {
             Device.tabletLandscape,
           ])
           ..addScenario(
-            widget: const MyHomePage(title:"FProject Layout",),
+            widget: const MyHomePage(title:"FProject Layout",message: "You have pushed the button this many times:",),
             name: 'default page',
           );
 
@@ -61,12 +61,12 @@ void main() {
             Device.tabletLandscape,
           ])
           ..addScenario(
-            widget: const MyHomePage(title:"Fproject Layout",),
+            widget: const MyHomePage(title:"Fproject Layout",message: "You have pushed the button this many times:",),
             name: 'default page',
           )
           // ignore: prefer-trailing-comma
           ..addScenario(
-            widget: const MyHomePage(title:"FProject Layout",),
+            widget: const MyHomePage(title:"FProject Layout",message: "You have pushed the button this many times:",),
             name: 'tap once',
             onCreate: (scenarioWidgetKey) async {
               final finder = find.descendant(
@@ -78,7 +78,7 @@ void main() {
             },
           )
           ..addScenario(
-            widget: const MyHomePage(title:"FProject Layout",),
+            widget: const MyHomePage(title:"FProject Layout",message: "You have pushed the button this many times:",),
             name: 'tap five times',
             onCreate: (scenarioWidgetKey) async {
               final finder = find.descendant(
@@ -100,4 +100,27 @@ void main() {
         // ignore: prefer-trailing-comma
         await screenMatchesGolden(tester, 'my_home_page_multiple_scenarios');
       });
+}
+
+// our custom matcher
+// ignore: unused_element
+class _HasText extends CustomMatcher {
+  _HasText(dynamic matcher) : super('Text data', 'data', matcher);
+
+  @override
+  String? featureValueOf(dynamic actual) {
+    if (actual is Finder) {
+      final element = actual.evaluate().single;
+      final widget = element.widget;
+      if (widget is Text) {
+        return widget.data;
+      } else {
+        // ignore: avoid_escaping_inner_quotes
+        throw Exception('_HasText matcher can\'t be applied to $element');
+      }
+    } else {
+      throw Exception(
+          '_HasText matcher can only be applied to a Finder object');
+    }
+  }
 }

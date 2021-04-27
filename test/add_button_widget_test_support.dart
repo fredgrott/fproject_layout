@@ -8,8 +8,10 @@ import 'package:fproject_layout/app/screens/myhomepage/managers/my_home_page.dar
 import 'package:given_when_then/given_when_then.dart';
 
 String myTitle = "FProject Layout";
+String myMessage = "You have pushed the button this many times:";
 
 Future<void> Function(WidgetTester) harness(
+    // ignore: prefer-trailing-comma
     WidgetTestHarnessCallback<_WidgetTestHarness> callback) {
   return (tester) =>
       givenWhenThenWidgetTest(_WidgetTestHarness(tester), callback);
@@ -21,7 +23,9 @@ class _WidgetTestHarness extends WidgetTestHarness {
 
 extension AddButtonGiven on WidgetTestGiven<_WidgetTestHarness> {
   Future<void> haveMyHomePage() async {
-    await tester.pumpWidget(MyHomePage(title: myTitle,));
+    await tester.pumpWidget(MyHomePage(
+      title: myTitle,message: myMessage,
+    ));
   }
 }
 

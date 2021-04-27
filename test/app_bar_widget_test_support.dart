@@ -8,6 +8,7 @@ import 'package:fproject_layout/app/modules/my_app.dart';
 import 'package:given_when_then/given_when_then.dart';
 
 Future<void> Function(WidgetTester) harness(
+    // ignore: prefer-trailing-comma
     WidgetTestHarnessCallback<_WidgetTestHarness> callback) {
   return (tester) =>
       givenWhenThenWidgetTest(_WidgetTestHarness(tester), callback);

@@ -9,10 +9,10 @@ import 'package:fproject_layout/app/modules/my_app.dart';
 import 'package:fproject_layout/app/screens/myhomepage/managers/my_home_page.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 
-
-
+String myTitle = "FProject Layout";
+String myMessage = "You have pushed the button this many times:";
 void main() {
-   WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   group('Basic Golden Tests ', () {
     testWidgets('Golden test', (WidgetTester tester) async {
       await tester.pumpWidget(MyApp());
@@ -27,12 +27,14 @@ void main() {
           Device.tabletLandscape,
         ])
         ..addScenario(
-          widget: const MyHomePage(title:"FProject Layout",),
+          widget:  MyHomePage(
+            title: myTitle,
+            message: myMessage,
+          ),
           name: 'default page',
         );
       await tester.pumpDeviceBuilder(builder);
       await screenMatchesGolden(tester, "demo page multiple screens");
     });
   });
-
 }

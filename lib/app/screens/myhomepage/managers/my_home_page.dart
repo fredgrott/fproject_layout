@@ -7,7 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:fproject_layout/app/screens/myhomepage/statecontainers/my_home_page_state.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title, @required this.message = ""}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -19,6 +19,11 @@ class MyHomePage extends StatefulWidget {
   // always marked "final".
 
   final String title;
+  final String message ;
+
+
+  static const Key titleKey = Key('MyWidget.title');
+  static const Key messageKey = Key('MyWidget.message');
 
   @override
   MyHomePageState createState() => MyHomePageState();
