@@ -24,6 +24,10 @@ Once it shows up in the sdk, I will enable that in the integration-test implemen
 
 ## Articles
 
+[Test Secrets, Test Suites](https://medium.com/p/test-secrets-test-suites-99f8390b8d4b)
+
+[An Architecture Layout](https://medium.com/codex/an-architecture-layout-8f414271b2b4)
+
 ## Framework Prerequisites
 
 Install these prerequisites before using the Flutter SDK:
