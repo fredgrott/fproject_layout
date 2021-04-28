@@ -16,8 +16,13 @@ import 'my_page_objects.dart';
 
 // ignore: long-method
 void main() {
-   WidgetsFlutterBinding.ensureInitialized();
+   setUp(() async {
+    // ignore: unused_local_variable
+    final WidgetsBinding binding =
+        TestWidgetsFlutterBinding.ensureInitialized();
+  });
   testWidgets('My home widget has a title and message, using PageObject',
+      // ignore: prefer-trailing-comma
       (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
     final app = MyAppPageObject();
@@ -44,6 +49,7 @@ class _HasText extends CustomMatcher {
       }
     } else {
       throw Exception(
+          // ignore: prefer-trailing-comma
           '_HasText matcher can only be applied to a Finder object');
     }
   }

@@ -25,6 +25,7 @@
   // The All Devices will show up as a Run Device launch Config Option in the Run menu
   "version": "0.2.0",
   "configurations": [
+    
     { // Profile launch config so that I can profile flutter mobile apps
       "name": "Flutter-Profile",
       "type": "dart",
@@ -44,12 +45,6 @@
       
     },
 
-    { // Test so that I can run widget tests which are not instrumented on an app
-      "name": "Flutter-Test",
-      "type": "dart",
-      "request": "launch",
-      "program": "./test/"
-    },
     { // Debug launch config so that I can debug an app
       "name": "Flutter-Debug",
       "request": "launch",
