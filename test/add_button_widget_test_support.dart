@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fproject_layout/app/screens/myhomepage/managers/my_home_page.dart';
+import 'package:fproject_layout/app/modules/my_app.dart';
 import 'package:given_when_then/given_when_then.dart';
 
 String myTitle = "FProject Layout";
@@ -23,9 +23,7 @@ class _WidgetTestHarness extends WidgetTestHarness {
 
 extension AddButtonGiven on WidgetTestGiven<_WidgetTestHarness> {
   Future<void> haveMyHomePage() async {
-    await tester.pumpWidget(MyHomePage(
-      title: myTitle,message: myMessage,
-    ));
+    await tester.pumpWidget(MyApp());
   }
 }
 

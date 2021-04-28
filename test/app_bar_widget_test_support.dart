@@ -27,7 +27,7 @@ extension AppBarGiven on WidgetTestGiven<_WidgetTestHarness> {
 extension AppBarWhen on WidgetTestWhen<_WidgetTestHarness> {
   Future<void> appBarFound() async {
     await tester.pump();
-    expect(find.byWidget(AppBar()), findsOneWidget);
+    expect(find.byType(AppBar), findsOneWidget);
   }
 }
 
